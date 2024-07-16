@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+std::vector<long long>functionx(long long n){
+	std::vector<long long>res_array;
+	res_array.push_back(n);
+	while(n!=1){
+	if(n%2!=0){
+		n=n*3+1;
+	}
+	else{
+		n=n/2;
+	}
+	res_array.push_back(n);
+}
+	return res_array;
+}
+int main(){
+	
+	long long n;
+	cin>>n;
+	std::vector<long long>res_array=functionx(n);
+	for(long long i:res_array){
+		std::cout<<i<<" ";
+	}
+	return 0;
+}
